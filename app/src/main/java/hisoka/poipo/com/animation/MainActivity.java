@@ -22,13 +22,14 @@ public class MainActivity extends AppCompatActivity {
         Button button1 = (Button) findViewById(R.id.bt1);
         Button button2  = (Button) findViewById(R.id.bt2);
 
-        a = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        a.reset();
+
 
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                a = AnimationUtils.loadAnimation(ctx, R.anim.alpha);
+                a.reset();
                 satu.startAnimation(a);
             }
         });
